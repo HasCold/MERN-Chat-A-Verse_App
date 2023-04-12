@@ -1,0 +1,22 @@
+JSON.parse() and JSON.stringify() are two built-in JavaScript methods that are used to convert data between JSON strings and JavaScript objects.
+
+Here's a brief explanation of when and how to use each of these methods:
+
+JSON.parse(): This method is used to parse a JSON string into a JavaScript object. You can use it whenever you receive a JSON string from an external source, such as an HTTP request, and need to convert it into a JavaScript object to access its properties and values. Here's an example:
+
+CODE :-
+const jsonString = '{"name": "John", "age": 30}';
+const jsonObject = JSON.parse(jsonString);
+console.log(jsonObject.name); // Output: "John"
+
+JSON.stringify(): This method is used to convert a JavaScript object into a JSON string. You can use it whenever you need to send data as a JSON string to an external source, such as an HTTP response. Here's an example:
+
+CODE :-
+const jsonObject = {name: "John", age: 30};
+const jsonString = JSON.stringify(jsonObject);
+console.log(jsonString); // Output: '{"name":"John","age":30}'
+
+In summary, you use JSON.parse() to convert a JSON string to a JavaScript object and JSON.stringify() to convert a JavaScript object to a JSON string. These methods are commonly used in web development for exchanging data between web servers and web clients, and for storing and retrieving data in databases.
+
+
+
