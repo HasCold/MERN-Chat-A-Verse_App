@@ -132,7 +132,7 @@ For support, email ha03330224926@gmail.com.
 
 ## Hosting Site
 
-Here You can view the complete build application on .com
+Here You can view the complete build application on render.com
 
 Here is the link :- https://chat-app-gd6o.onrender.com/
 
