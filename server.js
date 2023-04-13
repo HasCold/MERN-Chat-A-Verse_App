@@ -45,7 +45,7 @@ const server = app.listen(PORT, console.log(`Server Successfully Connected On ${
 const io = require("socket.io")(server, {
     pingTimeout : 60000,  // a user didn't send any message or something so its gonna close the connection in 60 sec
     cors : {  // Cross Origin Error
-        origin : "https://chat-app-gd6o.onrender.com",
+        origin : "http://localhost:3000",
     }
 })
 
