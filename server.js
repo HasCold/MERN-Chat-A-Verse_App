@@ -15,6 +15,11 @@ const app = express(); // app means it is executed function of express;
 connectDB();
 app.use(express.json()); // Server To accept the json data from Frontend 
 
+app.use(cors({
+    origin:["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com"],
+    credentials: true
+}));
+
 app.use((req, res, next) => {   
   res.header("Access-Control-Allow-Origin", ["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com"]);
   res.header('Cross-Origin-Resource-Policy', 'cross-origin');
@@ -23,10 +28,6 @@ app.use((req, res, next) => {
 })
 
 // By adding User.createDefaultUser(); In this way, the default user will be created only once, when the server starts up but only if it doesn't exist.
-app.use(cors({
-    origin:["http://localhost:3000"],
-    credentials: true
-}));
 User.createDefaultUser();
 
 app.use("/api/user", userRoutes);   // By using app.use() method with the "/api/user" path, we are telling the Express application to use the userRoutes middleware for any requests starting with "/api/user". This makes our code modular and easier to maintain as we can define separate routers for different parts of our API.
