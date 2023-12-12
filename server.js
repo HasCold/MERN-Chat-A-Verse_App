@@ -22,7 +22,10 @@ app.use(cors({
 
 app.use((req, res, next) => {   
   res.header("Access-Control-Allow-Origin", ["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com"]);
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.header('Cross-Origin-Resource-Policy', 'cross-origin');
+  res.header('Access-Control-Allow-Credentials', 'true');
 
   next();
 })
