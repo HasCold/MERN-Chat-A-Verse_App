@@ -14,7 +14,7 @@ import { IoMdSend } from "react-icons/io";
 import InputEmoji from "react-input-emoji";
 
 
-const ENDPOINT = "https://chat-a-verse.onrender.com";
+const ENDPOINT = "https://chat-a-verse.onrender.com"; // In development mode use http://localhost:5000
 var socket, selectedChatCompare;
 
 const SingleChats = ({fetchAgain, setFetchAgain}) => {
