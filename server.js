@@ -16,7 +16,7 @@ connectDB();
 app.use(express.json()); // Server To accept the json data from Frontend 
 
 app.use((req, res, next) => {   
-  res.header("Access-Control-Allow-Origin", ["http://localhost:5000", "https://chat-a-verse.onrender.com/"]);
+  res.header("Access-Control-Allow-Origin", ["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com"]);
   res.header('Cross-Origin-Resource-Policy', 'cross-origin');
 
   next();
