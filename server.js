@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 app.use((req, res, next) => {   
-  res.header("Access-Control-Allow-Origin", ["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com", "http://localhost:5000/socket.io/?EIO=4&transport=polling&t=OnVEikZ"]);
+  res.header("Access-Control-Allow-Origin", ["http://localhost:3000","http://localhost:5000", "https://chat-a-verse.onrender.com"]);
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.header('Cross-Origin-Resource-Policy', 'cross-origin');
@@ -74,7 +74,7 @@ const server = app.listen(PORT, console.log(`Server Successfully Connected On ${
 const io = require("socket.io")(server, {
     pingTimeout : 60000,  // a user didn't send any message or something so its gonna close the connection in 60 sec
     cors : {  // Cross Origin Error
-        origin : "http://localhost:3000" || "https://chat-a-verse.onrender.com",
+        origin : "https://chat-a-verse.onrender.com",
     }
 })
 
